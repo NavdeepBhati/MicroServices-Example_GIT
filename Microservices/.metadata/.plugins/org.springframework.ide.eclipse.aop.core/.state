@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="stock-service"/>
+<aop-project name="db-service"/>
+<aop-project name="SpringBootDemo"/>
+<aop-project name="eureka-service"/>
+</aop-reference-model>

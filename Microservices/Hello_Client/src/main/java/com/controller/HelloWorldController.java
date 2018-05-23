@@ -1,0 +1,26 @@
+package com.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+@RestController
+public class HelloWorldController {
+
+	@Autowired
+	RestTemplate restTemplate;
+	
+	@RequestMapping("/get/helloWorld")
+	public String  getHelloWorld() {
+		
+	String result=	restTemplate.getForObject("http://hello-server/getWorld", String.class);
+		
+	
+	System.err.println("EcXcuted......."+"Hello  "+result);
+	
+	return "Hello  "+result;
+	}
+	
+	
+}
